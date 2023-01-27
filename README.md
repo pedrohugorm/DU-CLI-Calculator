@@ -5,12 +5,12 @@ Calculation CLI Tool for Dual Universe
 ## Commands
 
 ```
-DUCalculator.exe path <filePath> <Position>
+./DUCalculator.exe path "<filePath>" "<Position>"
 ```
 Order the positions in an AR File to make a path starting from shortest distance
 
 ```
-DUCalculator.exe directions all 100000 <Position>
+./DUCalculator.exe directions all 100000 "<Position>"
 ```
 Calculates Positions on all directions adding 100km (each unit is a meter) to a given position
 
