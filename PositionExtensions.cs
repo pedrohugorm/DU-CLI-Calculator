@@ -15,7 +15,7 @@ public static class PositionExtensions
         if (pieces.Length != 5)
         {
             throw new ArgumentException(
-                "Invalid DU Position format. Example: ::pos{0,0,5236583.0860,-9051901.5198,-857517.7448}", 
+                $"Invalid DU Position format. Example: ::pos{{0,0,5236583.0860,-9051901.5198,-857517.7448}}. Param = {position}", 
                 nameof(position)
             );
         }

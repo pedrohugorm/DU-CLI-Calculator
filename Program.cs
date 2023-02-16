@@ -1,5 +1,6 @@
 ﻿using System.Numerics;
 using System.Text.RegularExpressions;
+using DUCalculator.LiveTrace;
 
 namespace DUCalculator;
 
@@ -23,9 +24,18 @@ public partial class Program
             case "directions":
                 CalculateDirections(args);
                 break;
+            case "livetrace":
+                LiveTrace();
+                break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(args));
         }
+    }
+
+    private static void LiveTrace()
+    {
+        var program = new LiveTraceSubProgram();
+        program.Run();
     }
 
     private static void CalculateDirections(IEnumerable<string> args)
@@ -68,8 +78,8 @@ public partial class Program
     
     private static void CalculatePath(IReadOnlyList<string> args)
     {
-        var filePath = args[0];
-        var startPosition = args[1].PositionToVector3();
+        var filePath = args[1];
+        var startPosition = args[2].PositionToVector3();
 
         var lines = File.ReadAllLines(filePath);
 
