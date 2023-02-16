@@ -5,6 +5,12 @@ Calculation CLI Tool for Dual Universe
 ## Commands
 
 ```
+./DUCalculator.exe livetrace
+```
+Always active character reader that can trace two points and provide a future point based on the distance setup.
+Paste two coords and the program calculates 5,10,15,20 su ahead.
+
+```
 ./DUCalculator.exe path "<filePath>" "<Position>"
 ```
 Order the positions in an AR File to make a path starting from shortest distance
